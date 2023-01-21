@@ -1,9 +1,39 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import DataRow from './DataRow';
+import Pagination from './Pagination';
+import { useTestQuery } from '../services/rtk/CoreApi';
 
 const DataIndex = () => {
+  const { data: ApiRes } = useTestQuery("");
+  const [Response, setResponse] = React.useState([])
+  useEffect(() => {
+    setResponse(ApiRes)
+  }, [ApiRes])
+
+  const Data = [{
+    name: "Random",
+    contact: "123345",
+    city: "PUNE",
+    state: "maharastra"
+  }, {
+    name: "Random",
+    contact: "123345",
+    city: "PUNE",
+    state: "maharastra"
+  }, {
+    name: "Random",
+    contact: "123345",
+    city: "PUNE",
+    state: "maharastra"
+  }]
+  console.log("API RESPONSE :", ApiRes)
+  console.log("STATE RESPONSE :", Response)
   return (
-    <div>DataIndex</div>
+    <>
+      <DataRow data={Data} />
+      <Pagination />
+    </>
   )
 }
 
-export default DataIndex
+export default DataIndex;
