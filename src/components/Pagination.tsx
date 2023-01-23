@@ -3,7 +3,9 @@ import React from 'react'
 const Pagination = ({ PageSize }: { PageSize: number }) => {
   return (
     <>
-      <div className="pagination:container justify-center">
+      <div className="pagination:container justify-center" onClick={() => {
+          window.alert("API isn't providing pagination yet!")
+      }}>
         <div className="pagination:number arrow">
           <svg width="18" height="18">
             <use xlinkHref="#left" />

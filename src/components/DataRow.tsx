@@ -1,10 +1,10 @@
 import React from 'react'
 
 const DataRow = ({ data }: any) => {
-    console.log("DATA :", data);
+    // console.log("DATA :", data);
     const [ID, setID] = React.useState("");
     const [Expand, setExpand] = React.useState(false);
-    console.log("EXPAND :", Expand)
+    // console.log("EXPAND :", Expand)
     return (
         <>
             {!data || data === null || data === undefined ? <div className='flex justify-center items-center h-full'>
@@ -49,7 +49,7 @@ const DataRow = ({ data }: any) => {
                                         if (ID !== element?.id) {
                                             setExpand(true)
                                         }
-                                        console.log(Expand)
+                                        // console.log(Expand)
                                     }}>{Expand && element?.id === ID ? "Hide" : "View"} Details</button>
                                 </div>
 

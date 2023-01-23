@@ -26,8 +26,8 @@ const DataIndex = () => {
     city: "PUNE",
     state: "maharastra"
   }]
-  console.log("API RESPONSE :", ApiRes)
-  console.log("STATE RESPONSE :", Response)
+  // console.log("API RESPONSE :", ApiRes)
+  // console.log("STATE RESPONSE :", Response)
   return (
     <>
       <div className='h-[85vh] overflow-scroll'>
