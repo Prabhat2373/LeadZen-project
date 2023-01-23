@@ -30,8 +30,10 @@ const DataIndex = () => {
   console.log("STATE RESPONSE :", Response)
   return (
     <>
-      <DataRow data={Data} />
-      <Pagination />
+      <div className='h-[85vh] overflow-scroll'>
+        <DataRow data={Response} />
+      </div>
+      <Pagination PageSize={Response?.length ?? 0} />
     </>
   )
 }

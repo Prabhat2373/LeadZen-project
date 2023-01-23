@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Pagination = () => {
+const Pagination = ({ PageSize }: { PageSize: number }) => {
   return (
     <>
       <div className="pagination:container justify-center">
@@ -11,14 +11,14 @@ const Pagination = () => {
           <span className="arrow:text">Previous</span>
         </div>
 
-        <div className="pagination:number">
+        <div className="pagination:number pagination:active">
           1
         </div>
         <div className="pagination:number">
           2
         </div>
 
-        <div className="pagination:number pagination:active">
+        <div className="pagination:number ">
           3
         </div>
 
@@ -27,11 +27,11 @@ const Pagination = () => {
         </div>
 
         <div className="pagination:number">
-          540
+          5
         </div>
 
         <div className="pagination:number arrow">
-        Next
+          Next
           <svg width="18" height="18">
             <use xlinkHref="#right" />
           </svg>
