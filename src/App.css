@@ -41,7 +41,7 @@
   display: grid;
   grid-template-columns: repeat(5 ,1fr);
   align-items: center;
-  padding: 18px;
+  padding: 24px;
   background: #ffe;
   gap: 15px;
   margin: 10px;
